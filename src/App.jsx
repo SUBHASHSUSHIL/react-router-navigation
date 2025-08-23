@@ -1,8 +1,13 @@
-import { Route, Routes } from 'react-router'
+import { Navigate, Route, Routes } from 'react-router'
 import Home from './Home';
 import About from './About';
 import Login from './Login';
 import Navbar from './Navbar';
+import PageNotFound from './PageNotFound';
+import College from './College';
+import Department from './Department';
+import Details from './Details';
+import Student from './Student';
 
 
 function App() {
@@ -14,6 +19,13 @@ function App() {
         <Route path="/" element={ <Home />} />
         <Route path="/about" element={<About />} />
         <Route path='/login' element={<Login /> } />
+        <Route path='/college' element={<College />}>
+        <Route path='student' element={<Student />}/>
+        <Route path='department' element={<Department />}/>
+        <Route path='details' element={<Details />}/>
+        </Route>
+        <Route path='/*' element={<PageNotFound />}/>
+        {/* <Route path='/*' element={<Navigate to="/about" />} /> */}
       </Routes>
     </>
   )
