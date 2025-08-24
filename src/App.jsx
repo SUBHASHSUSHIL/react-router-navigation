@@ -14,17 +14,23 @@ function App() {
 
   return (
     <>
-    <Navbar />
+      {/* <Navbar /> */}
+
       <Routes>
-        <Route path="/" element={ <Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path='/login' element={<Login /> } />
-        <Route path='/college' element={<College />}>
-        <Route path='student' element={<Student />}/>
-        <Route path='department' element={<Department />}/>
-        <Route path='details' element={<Details />}/>
+
+        <Route element={<Navbar />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path='/login' element={<Login />} />
         </Route>
-        <Route path='/*' element={<PageNotFound />}/>
+
+
+        <Route path='/college' element={<College />}>
+          <Route index element={<Student />} />
+          <Route path='department' element={<Department />} />
+          <Route path='details' element={<Details />} />
+        </Route>
+        <Route path='/*' element={<PageNotFound />} />
         {/* <Route path='/*' element={<Navigate to="/about" />} /> */}
       </Routes>
     </>
