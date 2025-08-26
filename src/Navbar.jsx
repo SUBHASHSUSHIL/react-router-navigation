@@ -1,4 +1,4 @@
-import { Link, Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 import './Header.css'
 
 export default function Navbar() {
@@ -6,24 +6,24 @@ export default function Navbar() {
         <div>
             <div className="heading">
                 <div>
-                    <Link className="link" to="/"><h2>Logo</h2></Link>
+                    <NavLink className="NavLink" to="/"><h2>Logo</h2></NavLink>
                 </div>
                 <div>
                     <ul>
                         <li>
-                            <Link className="link" to="/">Home</Link>
+                            <NavLink className={({ isActive }) => isActive ? "active NavLink" : "NavLink"} to="/">Home</NavLink>  {/* Home custom link */}
                         </li>
                         <li>
-                            <Link className="link" to="/in/user/about">About</Link>
+                            <NavLink className={({ isActive }) => isActive ? "active NavLink" : "NavLink"} to="/in/user/about">About</NavLink> {/* About custom link */}
                         </li>
                         <li>
-                            <Link className="link" to="/in/user/login">Login</Link>
+                            <NavLink className="NavLink" to="/in/user/login">Login</NavLink>
                         </li>
                         <li>
-                            <Link className="link" to="/college">College</Link>
+                            <NavLink className="NavLink" to="/college">College</NavLink>
                         </li>
                         <li>
-                            <Link className="link" to="/users">User</Link>
+                            <NavLink className="NavLink" to="/users">User</NavLink>
                         </li>
                     </ul>
                 </div>

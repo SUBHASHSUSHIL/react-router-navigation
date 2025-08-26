@@ -22,17 +22,21 @@ body {
     padding: 10px;
 }
 
-.heading .link h2{
+.heading .NavLink h2{
     margin: 0;
 }
 
-.heading .link{
+.heading .NavLink{
     text-decoration: none;
     font-size: 20px;
 }
 
-.college .link{
+.college .NavLink{
     text-decoration: none;
     font-size: 20px;
     margin: 10px;
+}
+
+.active{
+    font-weight: 800;
 }
