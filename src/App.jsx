@@ -23,7 +23,7 @@ function App() {
         <Route element={<Navbar />}>
           <Route path="/" element={<Home />} />
           <Route path='/users' element={<UserList />} />
-          <Route path="/users/:id" element={<UserDetail />} />
+          <Route path="/users/:id/:name?" element={<UserDetail />} />
 
           <Route path='in'>
             <Route path='/in/user'>
