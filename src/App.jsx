@@ -8,6 +8,8 @@ import College from './College';
 import Department from './Department';
 import Details from './Details';
 import Student from './Student';
+import UserList from './UserList';
+import UserDetail from './UserDetail';
 
 
 function App() {
@@ -20,8 +22,18 @@ function App() {
 
         <Route element={<Navbar />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/login' element={<Login />} />
+          <Route path='/users' element={<UserList />} />
+          <Route path="/users/:id" element={<UserDetail />} />
+
+          <Route path='in'>
+            <Route path='/in/user'>
+              <Route path="/in/user/about" element={<About />} />
+              <Route path='/in/user/login' element={<Login />} />
+            </Route>
+          </Route>
+
+
+
         </Route>
 
 
